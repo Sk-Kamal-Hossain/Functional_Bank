@@ -10,6 +10,8 @@ function getInputValue(){
     const depositInput = document.getElementById('deposit-input');
     const depositAmountText = depositInput.value;
     const depositAmount = parseFloat(depositAmountText);
+    // clear input field
+    depositInput.value = '';
     return depositAmount;
 }
 
@@ -32,9 +34,6 @@ document.getElementById('deposit-button').addEventListener('click', function(){
     const previousBalanceTotal = parseFloat(balanceTotalText);
 
     balanceTotal.innerText = previousBalanceTotal + depositAmount;
-
-    // clear input field
-    depositInput.value = '';
 });
 
 // handle withdraw button
